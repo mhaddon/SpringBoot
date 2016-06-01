@@ -1,0 +1,215 @@
+html {
+    background-color:black;
+    color:white;
+}
+
+body {
+    background-color:black;
+}
+
+#messages {
+    border:1px dashed white;
+    padding:5px;
+}
+
+header {
+    background-color:#eee;
+    color:black;
+}
+
+header > h3 {
+    margin-top:-10px;
+    padding:10px 50px;
+}
+
+.ChatWindows {
+    width:99%;
+    margin:auto;
+    position:relative;
+}
+
+.ChatWindows > .overlayDiv {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:100%;
+    height:100%;
+    background-color:rgba(0,0,0,0.25);
+    z-index:1;
+}
+
+.ChatWindows > .overlayDiv > .overlayMessageBox {
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translateY(-50%) translateX(-50%);
+    background-color:#eee;
+    border-radius:5px;
+    padding:25px;
+    display:none;
+}
+
+.ChatWindows > .overlayDiv > .overlayMessageBox > h3 {
+    text-align:center;
+}
+
+.ChatWindows > .overlayDiv > .overlayMessageBox > p {
+    text-align:center;
+    font-size:0.85em;
+}
+
+#connectedOverlay {
+    width:500px;
+    height:150px;
+}
+
+.WindowContainer {
+    background-color:black;
+    color:white;
+    padding:5px;
+}
+
+.WindowContainer > div {
+    background-color:#323232;
+    color:white;
+    padding:15px;
+}
+
+.Window {
+    background-color:#eee;
+    color:black;
+    margin:15px;
+    height:500px;
+    border-radius:5px;
+    position:relative;
+}
+
+.InputForm {
+    position:absolute;
+    bottom:0px;
+    left:0px;
+    width:100%;
+    height:54px;
+}
+
+.InputForm > input {
+    width:calc(100% - 54px);
+    height:100%;
+    padding:25px;
+    background-color:white;
+}
+
+.InputForm > button {
+    height:54px;
+    width:54px;
+    background-color:white;
+    position:absolute;
+    right:0%;
+    bottom:0%;
+}
+
+footer {
+    background-color:black;
+    padding:25px;
+    margin-top:25px;
+    color:#eee;
+    font-size:0.9em;
+}
+
+footer > a {
+    color: #83B5E0;
+}
+
+footer > a:hover {
+    color:cyan;
+}
+
+form .fa {
+    font-size:1.75m;
+    margin-top:5px;
+}
+
+.errormessage {
+    display:none;
+    color:red;
+    text-align:center;
+    font-size:0.85em;
+}
+
+/**/
+
+ul.characterlist {
+    display:block;
+    text-align:center;
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+
+ul.characterlist > li {
+    display:inline-block;
+    width:125px;
+    height:125px;
+    border:1px solid rgba(0, 0, 0, 0.17);
+    position:relative;
+    cursor:pointer;
+    overflow:hidden;
+}
+
+ul.characterlist > li:not(:nth-child(2n)) {
+    background-color:gainsboro;
+}
+
+ul.characterlist > li > img {
+    width:100%;
+    position:absolute;
+    left:0px;
+    top:50%;
+    transform: translateY(-50%);
+    z-index:0;
+}
+
+ul.characterlist > li > div {
+    width:100%;
+    position:absolute;
+    bottom:0px;
+    left:0px;
+    z-index:1;
+    background-color:rgba(0,0,0,0.5);
+    color:white;
+}
+
+#CharacterHistoryList {
+    /*background-color:black;*/
+    position:absolute;
+    top:0px;
+    left:0px;
+    width:100%;
+    padding:25px 10px;
+    padding-bottom:5px;
+    height:100%;
+    color:black;
+    overflow-y:auto;
+}
+
+#CharacterHistoryList:before {
+    position:absolute;
+    top:5px;
+    left:5px;
+    content:"Character Graveyard";
+    color:black;
+    font-size:0.65em;
+}
+
+.largeCheckBox {
+    display:inline-block;
+    float:right;
+    width:auto;
+    -ms-transform:scale(2);
+    -moz-transform:scale(2);
+    -webkit-transform:scale(2);
+    -o-transform:scale(2);
+    transform:scale(2);
+    padding:10px;
+    margin:5px;
+}
