@@ -1,37 +1,40 @@
 package com.boot.model;
 
+import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
-public class Character {
+@Table(name = "Characters")
+public class Character implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long ID;
     
-    @Column(name="Name")
+    @Column(name="Name", nullable = false)
     private String Name = "Failed Experiment";
     
-    @Column(name="Backstory")
+    @Column(name="Backstory", nullable = false)
     private String Backstory = "Great men thankfully did not waste any ink on this worthless cretin.";
     
-    @Column(name="ImageURL")
+    @Column(name="ImageURL", nullable = false)
     private String ImageURL = "http://sunfieldfarm.org/wp-content/uploads/2014/02/profile-placeholder.png";
     
-    @Column(name="ms")
-    private Integer ms = 0;
+    @Column(name="ms", nullable = false)
+    private Long ms = 0L;
     
-    @Column(name="FulfilledLifePurpose")
+    @Column(name="FulfilledLifePurpose", nullable = false)
     private boolean FulfilledLifePurpose = false;
     
 
     public Character() {
     }
 
-    public Character(Long ID, String Name, String Backstory, String ImageURL, Integer ms, boolean FulfilledLifePurpose) {
+    public Character(Long ID, String Name, String Backstory, String ImageURL, Long ms, boolean FulfilledLifePurpose) {
         this.setID(ID);
         this.setName(Name);
         this.setBackstory(Backstory);
@@ -72,11 +75,11 @@ public class Character {
         this.ImageURL = ImageURL;
     }
 
-    public Integer getms() {
+    public Long getms() {
         return this.ms;
     }
 
-    public final void setms(Integer ms) {
+    public final void setms(Long ms) {
         this.ms = ms;
     }
 

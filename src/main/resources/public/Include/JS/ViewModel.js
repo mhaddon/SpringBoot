@@ -60,21 +60,7 @@ var ViewModel = new (function () {
              * All of the recorded characters
              * See characterListComponent to see its use.
              */
-            Characters: [
-                {
-                    imageURL: 'http://sunfieldfarm.org/wp-content/uploads/2014/02/profile-placeholder.png',
-                    fulfilledLifePurpose: false,
-                    name: 'Test',
-                    backstory: 'test',
-                    ms: 1
-                }, {
-                    imageURL: 'https://hydra-media.cursecdn.com/overwatch.gamepedia.com/thumb/8/81/Tracer-portrait.png/555px-Tracer-portrait.png?version=b4f9448ca441712e99c01d936ba799da',
-                    fulfilledLifePurpose: false,
-                    name: 'Tracer',
-                    backstory: 'test',
-                    ms: 2
-                }
-            ]
+            Characters: []
         },
         /**
          * All the components that this vue class uses.

@@ -9,6 +9,28 @@ document.addEventListener('DOMContentLoaded', function () {
     Scene.loadElementCache();
     Scene.attachListeners();
     Scene.loadCharacters();
+
+    setTimeout(function () {
+        loadJSON('/api/v1/Characters', 'POST', {
+            name: 'Tracer',
+            ms: (new Date()).getTime(),
+            fulfilledLifePurpose: false,
+            imageURL: 'https://d1u1mce87gyfbn.cloudfront.net/media/thumbnail/tracer-gameplay.jpg'
+        }, function (obj) {
+            console.log(obj);
+            ViewModel.addCharacter(obj);
+        }.bind(this));
+
+        loadJSON('/api/v1/Characters', 'POST', {
+            name: 'Flynn Scifo',
+            ms: (new Date()).getTime(),
+            fulfilledLifePurpose: false,
+            imageURL: 'https://pbs.twimg.com/profile_images/2910102664/cafe65783d3fa15679ea239b1b84de69_400x400.jpeg'
+        }, function (obj) {
+            console.log(obj);
+            ViewModel.addCharacter(obj);
+        }.bind(this));
+    }, 500);
 });
 
 /**
